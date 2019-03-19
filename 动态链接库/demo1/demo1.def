@@ -1,0 +1,3 @@
+LIBRARY "wsock33"
+EXPORTS
+add0 @1

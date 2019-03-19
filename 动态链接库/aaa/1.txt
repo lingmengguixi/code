@@ -1,0 +1,279 @@
+INT GetNameByTypeW(
+  LPGUID lpServiceType,
+  LPWSTR lpServiceName,
+  DWORD  dwNameLength
+);
+INT GetServiceA(
+  DWORD                dwNameSpace,
+  LPGUID               lpGuid,
+  LPSTR                lpServiceName,
+  DWORD                dwProperties,
+  LPVOID               lpBuffer,
+  LPDWORD              lpdwBufferSize,
+  LPSERVICE_ASYNC_INFO lpServiceAsyncInfo
+);
+INT GetServiceW(
+  DWORD                dwNameSpace,
+  LPGUID               lpGuid,
+  LPWSTR               lpServiceName,
+  DWORD                dwProperties,
+  LPVOID               lpBuffer,
+  LPDWORD              lpdwBufferSize,
+  LPSERVICE_ASYNC_INFO lpServiceAsyncInfo
+);
+INT GetTypeByNameA(
+  LPSTR  lpServiceName,
+  LPGUID lpServiceType
+);
+INT GetTypeByNameW(
+  LPWSTR lpServiceName,
+  LPGUID lpServiceType
+);
+INT SetServiceA(
+  DWORD                dwNameSpace,
+  DWORD                dwOperation,
+  DWORD                dwFlags,
+  LPSERVICE_INFOA      lpServiceInfo,
+  LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,
+  LPDWORD              lpdwStatusFlags
+);
+INT SetServiceW(
+  DWORD                dwNameSpace,
+  DWORD                dwOperation,
+  DWORD                dwFlags,
+  LPSERVICE_INFOW      lpServiceInfo,
+  LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,
+  LPDWORD              lpdwStatusFlags
+);
+BOOL TransmitFile(
+  SOCKET                  hSocket,
+  HANDLE                  hFile,
+  DWORD                   nNumberOfBytesToWrite,
+  DWORD                   nNumberOfBytesPerSend,
+  LPOVERLAPPED            lpOverlapped,
+  LPTRANSMIT_FILE_BUFFERS lpTransmitBuffers,
+  DWORD                   dwReserved
+);
+HANDLE WSAAsyncGetHostByAddr(
+  HWND       hWnd,
+  u_int      wMsg,
+  const char *addr,
+  int        len,
+  int        type,
+  char       *buf,
+  int        buflen
+);
+HANDLE WSAAsyncGetHostByName(
+  HWND       hWnd,
+  u_int      wMsg,
+  const char *name,
+  char       *buf,
+  int        buflen
+);
+HANDLE WSAAsyncGetProtoByName(
+  HWND       hWnd,
+  u_int      wMsg,
+  const char *name,
+  char       *buf,
+  int        buflen
+);
+HANDLE WSAAsyncGetProtoByNumber(
+  HWND  hWnd,
+  u_int wMsg,
+  int   number,
+  char  *buf,
+  int   buflen
+);
+HANDLE  WSAAsyncGetServByName(
+  HWND       hWnd,
+  u_int      wMsg,
+  const char *name,
+  const char *proto,
+  char       *buf,
+  int        buflen
+);
+HANDLE WSAAsyncGetServByPort(
+  HWND       hWnd,
+  u_int      wMsg,
+  int        port,
+  const char *proto,
+  char       *buf,
+  int        buflen
+);
+int WSAAsyncSelect(
+  SOCKET s,
+  HWND   hWnd,
+  u_int  wMsg,
+  long   lEvent
+);
+int WSACancelAsyncRequest(
+  HANDLE hAsyncTaskHandle
+);
+int  WSACancelBlockingCall(
+
+);
+int  WSACleanup(
+
+);
+int WSAGetLastError(
+
+);
+BOOL WSAIsBlocking(
+
+);
+int WSARecvEx(
+  SOCKET s,
+  char   *buf,
+  int    len,
+  int    *flags
+);
+void WSASetLastError(
+  int iError
+);
+int WSAStartup(
+  WORD      wVersionRequired,
+  LPWSADATA lpWSAData
+);
+int __WSAFDIsSet(
+  SOCKET socket,
+  fd_set *set1
+);
+SOCKET  accept(
+  SOCKET   s,
+  sockaddr *addr,
+  int      *addrlen
+);
+int bind(
+  SOCKET         s,
+  const sockaddr *addr,
+  int            namelen
+);
+int closesocket(
+  IN SOCKET s
+);
+int   connect(
+  SOCKET         s,
+  const sockaddr *name,
+  int            namelen
+);
+hostent *  gethostbyaddr(
+  const char *addr,
+  int        len,
+  int        type
+);
+hostent * gethostbyname(
+  const char *name
+);
+int    gethostname(
+  char *name,
+  int  namelen
+);
+int getpeername(
+  SOCKET   s,
+  sockaddr *name,
+  int      *namelen
+);
+protoent * getprotobyname(
+  const char *name
+);
+protoent * getprotobynumber(
+  int proto
+);
+servent * getservbyname(
+  const char *name,
+  const char *proto
+);
+servent * getservbyport(
+  int        port,
+  const char *proto
+);
+int getsockname(
+  SOCKET   s,
+  sockaddr *name,
+  int      *namelen
+);
+int getsockopt(
+  SOCKET s,
+  int    level,
+  int    optname,
+  char   *optval,
+  int    *optlen
+);
+u_long htonl(
+  u_long hostlong
+);
+u_short htons(
+  u_short hostshort
+);
+unsigned long inet_addr(
+  const char *cp
+);
+char * inet_ntoa(
+  in_addr in
+);
+int  ioctlsocket(
+  SOCKET s,
+  long   cmd,
+  u_long *argp
+);
+int  listen(
+  SOCKET s,
+  int    backlog
+);
+u_long  ntohl(
+  u_long netlong
+);
+u_short ntohs(
+  u_short netshort
+);
+int recv(
+  SOCKET s,
+  char   *buf,
+  int    len,
+  int    flags
+);
+int recvfrom(
+  SOCKET   s,
+  char     *buf,
+  int      len,
+  int      flags,
+  sockaddr *from,
+  int      *fromlen
+);
+int select(
+  int           nfds,
+  fd_set        *readfds,
+  fd_set        *writefds,
+  fd_set        *exceptfds,
+  const timeval *timeout
+);
+int send(
+  SOCKET     s,
+  const char *buf,
+  int        len,
+  int        flags
+);
+int sendto(
+  SOCKET         s,
+  const char     *buf,
+  int            len,
+  int            flags,
+  const sockaddr *to,
+  int            tolen
+);
+int setsockopt(
+  SOCKET     s,
+  int        level,
+  int        optname,
+  const char *optval,
+  int        optlen
+);
+int shutdown(
+  SOCKET s,
+  int    how
+);
+SOCKET socket(
+  int af,
+  int type,
+  int protocol
+);

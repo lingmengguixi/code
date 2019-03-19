@@ -1,0 +1,3 @@
+﻿    正在创建库 D:\code\c++\workspace\动态链接库\Debug\demo1.lib 和对象 D:\code\c++\workspace\动态链接库\Debug\demo1.exp
+demo1.exp : warning LNK4070: .EXP 中的 /OUT:wsock32.dll 指令与输出文件名“D:\code\c++\workspace\动态链接库\Debug\demo1.dll”不同；忽略指令
+  demo1.vcxproj -> D:\code\c++\workspace\动态链接库\Debug\demo1.dll

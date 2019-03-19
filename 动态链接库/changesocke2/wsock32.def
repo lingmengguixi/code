@@ -1,0 +1,4 @@
+LIBRARY "wsock32"
+EXPORTS
+haha @1
+AcceptEx @2

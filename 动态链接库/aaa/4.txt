@@ -1,0 +1,162 @@
+INT  PASCAL FAR GetNameByTypeW(LPGUID lpServiceType,LPWSTR lpServiceName,DWORD dwNameLength){
+    return GetNameByTypeW1(lpServiceType,lpServiceName,dwNameLength);
+}
+INT  PASCAL FAR GetServiceA(DWORD dwNameSpace,LPGUID lpGuid,LPSTR lpServiceName,DWORD dwProperties,LPVOID lpBuffer,LPDWORD lpdwBufferSize,LPSERVICE_ASYNC_INFO lpServiceAsyncInfo){
+    return GetServiceA1(dwNameSpace,lpGuid,lpServiceName,dwProperties,lpBuffer,lpdwBufferSize,lpServiceAsyncInfo);
+}
+INT  PASCAL FAR GetServiceW(DWORD dwNameSpace,LPGUID lpGuid,LPWSTR lpServiceName,DWORD dwProperties,LPVOID lpBuffer,LPDWORD lpdwBufferSize,LPSERVICE_ASYNC_INFO lpServiceAsyncInfo){
+    return GetServiceW1(dwNameSpace,lpGuid,lpServiceName,dwProperties,lpBuffer,lpdwBufferSize,lpServiceAsyncInfo);
+}
+INT  PASCAL FAR GetTypeByNameA(LPSTR lpServiceName,LPGUID lpServiceType){
+    return GetTypeByNameA1(lpServiceName,lpServiceType);
+}
+INT  PASCAL FAR GetTypeByNameW(LPWSTR lpServiceName,LPGUID lpServiceType){
+    return GetTypeByNameW1(lpServiceName,lpServiceType);
+}
+INT  PASCAL FAR SetServiceA(DWORD dwNameSpace,DWORD dwOperation,DWORD dwFlags,LPSERVICE_INFOA lpServiceInfo,LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,LPDWORD lpdwStatusFlags){
+    return SetServiceA1(dwNameSpace,dwOperation,dwFlags,lpServiceInfo,lpServiceAsyncInfo,lpdwStatusFlags);
+}
+INT  PASCAL FAR SetServiceW(DWORD dwNameSpace,DWORD dwOperation,DWORD dwFlags,LPSERVICE_INFOW lpServiceInfo,LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,LPDWORD lpdwStatusFlags){
+    return SetServiceW1(dwNameSpace,dwOperation,dwFlags,lpServiceInfo,lpServiceAsyncInfo,lpdwStatusFlags);
+}
+BOOL  PASCAL FAR TransmitFile(SOCKET hSocket,HANDLE hFile,DWORD nNumberOfBytesToWrite,DWORD nNumberOfBytesPerSend,LPOVERLAPPED lpOverlapped,LPTRANSMIT_FILE_BUFFERS lpTransmitBuffers,DWORD dwReserved){
+    return TransmitFile1(hSocket,hFile,nNumberOfBytesToWrite,nNumberOfBytesPerSend,lpOverlapped,lpTransmitBuffers,dwReserved);
+}
+HANDLE  PASCAL FAR WSAAsyncGetHostByAddr(HWND hWnd,u_int wMsg,const char * addr,int len,int type,char * buf,int buflen){
+    return WSAAsyncGetHostByAddr1(hWnd,wMsg,addr,len,type,buf,buflen);
+}
+HANDLE  PASCAL FAR WSAAsyncGetHostByName(HWND hWnd,u_int wMsg,const char * name,char * buf,int buflen){
+    return WSAAsyncGetHostByName1(hWnd,wMsg,name,buf,buflen);
+}
+HANDLE  PASCAL FAR WSAAsyncGetProtoByName(HWND hWnd,u_int wMsg,const char * name,char * buf,int buflen){
+    return WSAAsyncGetProtoByName1(hWnd,wMsg,name,buf,buflen);
+}
+HANDLE  PASCAL FAR WSAAsyncGetProtoByNumber(HWND hWnd,u_int wMsg,int number,char * buf,int buflen){
+    return WSAAsyncGetProtoByNumber1(hWnd,wMsg,number,buf,buflen);
+}
+HANDLE  PASCAL FAR WSAAsyncGetServByName(HWND hWnd,u_int wMsg,const char * name,const char * proto,char * buf,int buflen){
+    return WSAAsyncGetServByName1(hWnd,wMsg,name,proto,buf,buflen);
+}
+HANDLE  PASCAL FAR WSAAsyncGetServByPort(HWND hWnd,u_int wMsg,int port,const char * proto,char * buf,int buflen){
+    return WSAAsyncGetServByPort1(hWnd,wMsg,port,proto,buf,buflen);
+}
+int  PASCAL FAR WSAAsyncSelect(SOCKET s,HWND hWnd,u_int wMsg,long lEvent){
+    return WSAAsyncSelect1(s,hWnd,wMsg,lEvent);
+}
+int  PASCAL FAR WSACancelAsyncRequest(HANDLE hAsyncTaskHandle){
+    return WSACancelAsyncRequest1(hAsyncTaskHandle);
+}
+int  PASCAL FAR WSACancelBlockingCall(){
+    return WSACancelBlockingCall1();
+}
+int  PASCAL FAR WSACleanup(){
+    return WSACleanup1();
+}
+int  PASCAL FAR WSAGetLastError(){
+    return WSAGetLastError1();
+}
+BOOL  PASCAL FAR WSAIsBlocking(){
+    return WSAIsBlocking1();
+}
+int  PASCAL FAR WSARecvEx(SOCKET s,char * buf,int len,int * flags){
+    return WSARecvEx1(s,buf,len,flags);
+}
+void  PASCAL FAR WSASetLastError(int iError){
+    return WSASetLastError1(iError);
+}
+int  PASCAL FAR WSAStartup(WORD wVersionRequired,LPWSADATA lpWSAData){
+    return WSAStartup1(wVersionRequired,lpWSAData);
+}
+int  PASCAL FAR __WSAFDIsSet(SOCKET socket,fd_set * set1){
+    return __WSAFDIsSet1(socket,set1);
+}
+SOCKET  PASCAL FAR accept(SOCKET s,sockaddr * addr,int * addrlen){
+    return accept1(s,addr,addrlen);
+}
+int  PASCAL FAR bind(SOCKET s,const sockaddr * addr,int namelen){
+    return bind1(s,addr,namelen);
+}
+int  PASCAL FAR closesocket(IN SOCKET s){
+    return closesocket1(s);
+}
+int  PASCAL FAR connect(SOCKET s,const sockaddr * name,int namelen){
+    return connect1(s,name,namelen);
+}
+hostent *  PASCAL FAR gethostbyaddr(const char * addr,int len,int type){
+    return gethostbyaddr1(addr,len,type);
+}
+hostent *  PASCAL FAR gethostbyname(const char * name){
+    return gethostbyname1(name);
+}
+int  PASCAL FAR gethostname(char * name,int namelen){
+    return gethostname1(name,namelen);
+}
+int  PASCAL FAR getpeername(SOCKET s,sockaddr * name,int * namelen){
+    return getpeername1(s,name,namelen);
+}
+protoent *  PASCAL FAR getprotobyname(const char * name){
+    return getprotobyname1(name);
+}
+protoent *  PASCAL FAR getprotobynumber(int proto){
+    return getprotobynumber1(proto);
+}
+servent *  PASCAL FAR getservbyname(const char * name,const char * proto){
+    return getservbyname1(name,proto);
+}
+servent *  PASCAL FAR getservbyport(int port,const char * proto){
+    return getservbyport1(port,proto);
+}
+int  PASCAL FAR getsockname(SOCKET s,sockaddr * name,int * namelen){
+    return getsockname1(s,name,namelen);
+}
+int  PASCAL FAR getsockopt(SOCKET s,int level,int optname,char * optval,int * optlen){
+    return getsockopt1(s,level,optname,optval,optlen);
+}
+u_long  PASCAL FAR htonl(u_long hostlong){
+    return htonl1(hostlong);
+}
+u_short  PASCAL FAR htons(u_short hostshort){
+    return htons1(hostshort);
+}
+unsigned long  PASCAL FAR inet_addr(const char * cp){
+    return inet_addr1(cp);
+}
+char *  PASCAL FAR inet_ntoa(in_addr in){
+    return inet_ntoa1(in);
+}
+int  PASCAL FAR ioctlsocket(SOCKET s,long cmd,u_long * argp){
+    return ioctlsocket1(s,cmd,argp);
+}
+int  PASCAL FAR listen(SOCKET s,int backlog){
+    return listen1(s,backlog);
+}
+u_long  PASCAL FAR ntohl(u_long netlong){
+    return ntohl1(netlong);
+}
+u_short  PASCAL FAR ntohs(u_short netshort){
+    return ntohs1(netshort);
+}
+int  PASCAL FAR recv(SOCKET s,char * buf,int len,int flags){
+    return recv1(s,buf,len,flags);
+}
+int  PASCAL FAR recvfrom(SOCKET s,char * buf,int len,int flags,sockaddr * from,int * fromlen){
+    return recvfrom1(s,buf,len,flags,from,fromlen);
+}
+int  PASCAL FAR select(int nfds,fd_set * readfds,fd_set * writefds,fd_set * exceptfds,const timeval * timeout){
+    return select1(nfds,readfds,writefds,exceptfds,timeout);
+}
+int  PASCAL FAR send(SOCKET s,const char * buf,int len,int flags){
+    return send1(s,buf,len,flags);
+}
+int  PASCAL FAR sendto(SOCKET s,const char * buf,int len,int flags,const sockaddr * to,int tolen){
+    return sendto1(s,buf,len,flags,to,tolen);
+}
+int  PASCAL FAR setsockopt(SOCKET s,int level,int optname,const char * optval,int optlen){
+    return setsockopt1(s,level,optname,optval,optlen);
+}
+int  PASCAL FAR shutdown(SOCKET s,int how){
+    return shutdown1(s,how);
+}
+SOCKET  PASCAL FAR socket(int af,int type,int protocol){
+    return socket1(af,type,protocol);
+}

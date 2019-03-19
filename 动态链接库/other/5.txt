@@ -1,0 +1,825 @@
+SOCKET(__stdcall *accept1)(
+	SOCKET s, 
+	sockaddr *addr, 
+	int *addrlen);
+BOOL(__stdcall *AcceptEx1)(
+	SOCKET       sListenSocket,
+	SOCKET       sAcceptSocket,
+	PVOID        lpOutputBuffer,
+	DWORD        dwReceiveDataLength,
+	DWORD        dwLocalAddressLength,
+	DWORD        dwRemoteAddressLength,
+	LPDWORD      lpdwBytesReceived,
+	LPOVERLAPPED lpOverlapped
+);
+int(__stdcall *bind1)(
+	SOCKET         s,
+	const sockaddr *addr,
+	int            namelen
+);
+int(__stdcall *closesocket1)(
+	IN SOCKET s
+);
+int(__stdcall *connect1)(
+	SOCKET         s,
+	const sockaddr *name,
+	int            namelen
+	);
+
+BOOL(__stdcall *LpfnConnectex1)(
+	SOCKET s,
+	const sockaddr *name,
+	int namelen,
+	PVOID lpSendBuffer,
+	DWORD dwSendDataLength,
+	LPDWORD lpdwBytesSent,
+	LPOVERLAPPED lpOverlapped
+	);
+
+BOOL(__stdcall *DisconnectEx1)(
+	_In_ SOCKET       hSocket,
+	_In_ LPOVERLAPPED lpOverlapped,
+	_In_ DWORD        dwFlags,
+	_In_ DWORD        reserved
+	);
+INT(__stdcall *EnumProtocolsA1)(
+	LPINT   lpiProtocols,
+	LPVOID  lpProtocolBuffer,
+	LPDWORD lpdwBufferLength
+	);
+VOID (__stdcall *freeaddrinfo1)(
+	PADDRINFOA pAddrInfo
+	);
+void (__stdcall *FreeAddrInfoEx1)(
+	PADDRINFOEXA pAddrInfoEx
+	);
+VOID (__stdcall *FreeAddrInfoW1)(
+	PADDRINFOW pAddrInfo
+	);
+char * (__stdcall *gai_strerrorA1)(
+	int ecode
+	);
+void(__stdcall *GetAcceptExSockaddrs1)(
+	PVOID    lpOutputBuffer,
+	DWORD    dwReceiveDataLength,
+	DWORD    dwLocalAddressLength,
+	DWORD    dwRemoteAddressLength,
+	sockaddr **LocalSockaddr,
+	LPINT    LocalSockaddrLength,
+	sockaddr **RemoteSockaddr,
+	LPINT    RemoteSockaddrLength
+	);
+INT(__stdcall *GetAddressByNameA1)(
+	DWORD                dwNameSpace,
+	LPGUID               lpServiceType,
+	LPSTR                lpServiceName,
+	LPINT                lpiProtocols,
+	DWORD                dwResolution,
+	LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,
+	LPVOID               lpCsaddrBuffer,
+	LPDWORD              lpdwBufferLength,
+	LPSTR                lpAliasBuffer,
+	LPDWORD              lpdwAliasBufferLength
+	);
+INT (__stdcall *getaddrinfo1)(
+	PCSTR           pNodeName,
+	PCSTR           pServiceName,
+	const ADDRINFOA *pHints,
+	PADDRINFOA      *ppResult
+);
+INT (__stdcall *GetAddrInfoExA1)(
+	PCSTR                              pName,
+	PCSTR                              pServiceName,
+	DWORD                              dwNameSpace,
+	LPGUID                             lpNspId,
+	const ADDRINFOEXA                  *hints,
+	PADDRINFOEXA                       *ppResult,
+	timeval                            *timeout,
+	LPOVERLAPPED                       lpOverlapped,
+	LPLOOKUPSERVICE_COMPLETION_ROUTINE lpCompletionRoutine,
+	LPHANDLE                           lpNameHandle
+	);
+INT (__stdcall *GetAddrInfoExCancel1)(
+	LPHANDLE lpHandle
+	);
+INT (__stdcall *GetAddrInfoExOverlappedResult1)(
+	LPOVERLAPPED lpOverlapped
+	);
+INT (__stdcall *GetAddrInfoW1)(
+	PCWSTR          pNodeName,
+	PCWSTR          pServiceName,
+	const ADDRINFOW *pHints,
+	PADDRINFOW      *ppResult
+	);
+void(__stdcall *gethostbyaddr1)(
+	const char *addr,
+	int        len,
+	int        type
+	);
+void(__stdcall *gethostbyname1)(
+	const char *name
+	);
+int (__stdcall *GetHostNameW1)(
+	PWSTR name,
+	int   namelen
+	);
+int(__stdcall *getipv4sourcefilter1)(
+	SOCKET              Socket,
+	IN_ADDR             Interface,
+	IN_ADDR             Group,
+	MULTICAST_MODE_TYPE *FilterMode,
+	ULONG               *SourceCount,
+	IN_ADDR             *SourceList
+	);
+INT(__stdcall *GetNameByTypeA1)(
+	LPGUID lpServiceType,
+	LPSTR  lpServiceName,
+	DWORD  dwNameLength
+	);
+INT (__stdcall *getnameinfo1)(
+	const SOCKADDR *pSockaddr,
+	socklen_t      SockaddrLength,
+	PCHAR          pNodeBuffer,
+	DWORD          NodeBufferSize,
+	PCHAR          pServiceBuffer,
+	DWORD          ServiceBufferSize,
+	INT            Flags
+	);
+INT (__stdcall *GetNameInfoW1)(
+	const SOCKADDR *pSockaddr,
+	socklen_t      SockaddrLength,
+	PWCHAR         pNodeBuffer,
+	DWORD          NodeBufferSize,
+	PWCHAR         pServiceBuffer,
+	DWORD          ServiceBufferSize,
+	INT            Flags
+	);
+int(__stdcall *getpeername1)(
+	SOCKET   s,
+	sockaddr *name,
+	int      *namelen
+	);
+protoent * (__stdcall *getprotobyname1)(
+	const char *name
+	);
+protoent * (__stdcall *getprotobynumber1)(
+	int proto
+	);
+servent * (__stdcall *getservbyname1)(
+	const char *name,
+	const char *proto
+	);
+servent * (__stdcall *getservbyport1)(
+	int        port,
+	const char *proto
+	);
+INT(__stdcall *GetServiceA1)(
+	DWORD                dwNameSpace,
+	LPGUID               lpGuid,
+	LPSTR                lpServiceName,
+	DWORD                dwProperties,
+	LPVOID               lpBuffer,
+	LPDWORD              lpdwBufferSize,
+	LPSERVICE_ASYNC_INFO lpServiceAsyncInfo
+	);
+int(__stdcall *getsockname1)(
+	SOCKET   s,
+	sockaddr *name,
+	int      *namelen
+	);
+int(__stdcall *getsockopt1)(
+	SOCKET s,
+	int    level,
+	int    optname,
+	char   *optval,
+	int    *optlen
+	);
+int(__stdcall *getsourcefilter1)(
+	SOCKET              Socket,
+	ULONG               Interface,
+	const SOCKADDR      *Group,
+	int                 GroupLength,
+	MULTICAST_MODE_TYPE *FilterMode,
+	ULONG               *SourceCount,
+	SOCKADDR_STORAGE    *SourceList
+	);
+INT(__stdcall *GetTypeByNameA1)(
+	LPSTR  lpServiceName,
+	LPGUID lpServiceType
+	);
+unsigned __int64(__stdcall *htond1)(
+	double Value
+	);
+unsigned __int32(__stdcall *htonf1)(
+	float Value
+	);
+u_long(__stdcall *htonl1)(
+	u_long hostlong
+	);
+unsigned __int64(__stdcall *htonll1)(
+	unsigned __int64 Value
+	);
+u_short(__stdcall *htons1)(
+	u_short hostshort
+	);
+void(__stdcall *inet_addr1)(
+	const char *cp
+	);
+void(__stdcall *inet_ntoa1)(
+	in_addr in
+	);
+PCWSTR (__stdcall *InetNtopW1)(
+	INT        Family,
+	const VOID *pAddr,
+	PWSTR      pStringBuf,
+	size_t     StringBufSize
+	);
+INT (__stdcall *InetPtonW1)(
+	INT    Family,
+	PCWSTR pszAddrString,
+	PVOID  pAddrBuf
+	);
+int(__stdcall *ioctlsocket1)(
+	SOCKET s,
+	long   cmd,
+	u_long *argp
+	);
+int (__stdcall *listen1)(
+	SOCKET s,
+	int    backlog
+	);
+double(__stdcall *ntohd1)(
+	unsigned __int64 Value
+	);
+float(__stdcall *ntohf1)(
+	unsigned __int32 Value
+	);
+u_long(__stdcall *ntohl1)(
+	u_long netlong
+	);
+unsigned __int64(__stdcall *ntohll1)(
+	unsigned __int64 Value
+	);
+u_short(__stdcall *ntohs1)(
+	u_short netshort
+	);
+int(__stdcall *recv1)(
+	SOCKET s,
+	char   *buf,
+	int    len,
+	int    flags
+	);
+int(__stdcall *recvfrom1)(
+	SOCKET   s,
+	char     *buf,
+	int      len,
+	int      flags,
+	sockaddr *from,
+	int      *fromlen
+	);
+VOID(__stdcall *RIOCloseCompletionQueue1)(
+	_In_ RIO_CQ CQ
+	);
+RIO_CQ(__stdcall *RIOCreateCompletionQueue1)(
+	_In_     DWORD                       QueueSize,
+	_In_opt_ RIO_NOTIFICATION_COMPLETION NotificationCompletion
+	);
+RIO_RQ(__stdcall *RIOCreateRequestQueue1)(
+	_In_ SOCKET Socket,
+	_In_ ULONG  MaxOutstandingReceive,
+	_In_ ULONG  MaxReceiveDataBuffers,
+	_In_ ULONG  MaxOutstandingSend,
+	_In_ ULONG  MaxSendDataBuffers,
+	_In_ RIO_CQ ReceiveCQ,
+	_In_ RIO_CQ SendCQ,
+	_In_ PVOID  SocketContext
+	);
+ULONG(__stdcall *RIODequeueCompletion1)(
+	_In_  RIO_CQ     CQ,
+	_Out_ PRIORESULT Array,
+	_In_  ULONG      ArraySize
+	);
+VOID(__stdcall *RIODeregisterBuffer1)(
+	_In_ RIO_BUFFERID BufferId
+	);
+INT(__stdcall *RIONotify1)(
+	_In_ RIO_CQ CQ
+	);
+BOOL(__stdcall *RIOReceive1)(
+	_In_ RIO_RQ   SocketQueue,
+	_In_ PRIO_BUF pData,
+	_In_ ULONG    DataBufferCount,
+	_In_ DWORD    Flags,
+	_In_ PVOID    RequestContext
+	);
+BOOL(__stdcall *RIOReceiveEx1)(
+	_In_ RIO_RQ   SocketQueue,
+	_In_ PRIO_BUF pData,
+	_In_ ULONG    DataBufferCount,
+	_In_ PRIO_BUF pLocalAddress,
+	_In_ PRIO_BUF pRemoteAddress,
+	_In_ PRIO_BUF pControlContext,
+	_In_ PRIO_BUF pFlags,
+	_In_ DWORD    Flags,
+	_In_ PVOID    RequestContext
+	);
+
+RIO_BUFFERID(__stdcall *RIORegisterBuffer1)(
+	_In_ PCHAR DataBuffer,
+	_In_ DWORD DataLength
+	);
+BOOL(__stdcall *RIOResizeCompletionQueue1)(
+	_In_ RIO_CQ CQ,
+	_In_ DWORD  QueueSize
+	);
+BOOL(__stdcall *RIOResizeRequestQueue1)(
+	_In_ RIO_RQ RQ,
+	_In_ DWORD  MaxOutstandingReceive,
+	_In_ DWORD  MaxOutstandingSend
+	);
+BOOL(__stdcall *RIOSend1)(
+	_In_ RIO_RQ   SocketQueue,
+	_In_ PRIO_BUF pData,
+	_In_ ULONG    DataBufferCount,
+	_In_ DWORD    Flags,
+	_In_ PVOID    RequestContext
+	);
+BOOL(__stdcall *RIOSendEx1)(
+	_In_ RIO_RQ   SocketQueue,
+	_In_ PRIO_BUF pData,
+	_In_ ULONG    DataBufferCount,
+	_In_ PRIO_BUF pLocalAddress,
+	_In_ PRIO_BUF pRemoteAddress,
+	_In_ PRIO_BUF pControlContext,
+	_In_ PRIO_BUF pFlags,
+	_In_ DWORD    Flags,
+	_In_ PVOID    RequestContext
+	);
+int  (__stdcall *select1)(
+	int           nfds,
+	fd_set        *readfds,
+	fd_set        *writefds,
+	fd_set        *exceptfds,
+	const timeval *timeout
+	);
+int (__stdcall *send1)(
+	SOCKET     s,
+	const char *buf,
+	int        len,
+	int        flags
+	);
+int(__stdcall *sendto1)(
+	SOCKET         s,
+	const char     *buf,
+	int            len,
+	int            flags,
+	const sockaddr *to,
+	int            tolen
+	);
+INT (__stdcall *SetAddrInfoExA1)(
+	PCSTR                              pName,
+	PCSTR                              pServiceName,
+	SOCKET_ADDRESS                     *pAddresses,
+	DWORD                              dwAddressCount,
+	LPBLOB                             lpBlob,
+	DWORD                              dwFlags,
+	DWORD                              dwNameSpace,
+	LPGUID                             lpNspId,
+	timeval                            *timeout,
+	LPOVERLAPPED                       lpOverlapped,
+	LPLOOKUPSERVICE_COMPLETION_ROUTINE lpCompletionRoutine,
+	LPHANDLE                           lpNameHandle
+	);
+int(__stdcall *setipv4sourcefilter1)(
+	SOCKET              Socket,
+	IN_ADDR             Interface,
+	IN_ADDR             Group,
+	MULTICAST_MODE_TYPE FilterMode,
+	ULONG               SourceCount,
+	const IN_ADDR       *SourceList
+	);
+INT(__stdcall *SetServiceA1)(
+	DWORD                dwNameSpace,
+	DWORD                dwOperation,
+	DWORD                dwFlags,
+	LPSERVICE_INFOA      lpServiceInfo,
+	LPSERVICE_ASYNC_INFO lpServiceAsyncInfo,
+	LPDWORD              lpdwStatusFlags
+	);
+HRESULT(__stdcall *SetSocketMediaStreamingMode1)(
+	BOOL value
+	);
+int(__stdcall *setsockopt1)(
+	SOCKET     s,
+	int        level,
+	int        optname,
+	const char *optval,
+	int        optlen
+	);
+int(__stdcall *setsourcefilter1)(
+	SOCKET                 Socket,
+	ULONG                  Interface,
+	const SOCKADDR         *Group,
+	int                    GroupLength,
+	MULTICAST_MODE_TYPE    FilterMode,
+	ULONG                  SourceCount,
+	const SOCKADDR_STORAGE *SourceList
+	);
+int(__stdcall *shutdown1)(
+	SOCKET s,
+	int    how
+	);
+SOCKET (__stdcall *socket1)(
+	int af,
+	int type,
+	int protocol
+	);
+BOOL(__stdcall *TransmitFile1)(
+	SOCKET                  hSocket,
+	HANDLE                  hFile,
+	DWORD                   nNumberOfBytesToWrite,
+	DWORD                   nNumberOfBytesPerSend,
+	LPOVERLAPPED            lpOverlapped,
+	LPTRANSMIT_FILE_BUFFERS lpTransmitBuffers,
+	DWORD                   dwReserved
+	);
+BOOL(__stdcall *LpfnTransmitpackets1)(
+	SOCKET hSocket,
+	LPTRANSMIT_PACKETS_ELEMENT lpPacketArray,
+	DWORD nElementCount,
+	DWORD nSendSize,
+	LPOVERLAPPED lpOverlapped,
+	DWORD dwFlags
+	);
+SOCKET(__stdcall *WSAAccept1)(
+	SOCKET          s,
+	sockaddr        *addr,
+	LPINT           addrlen,
+	LPCONDITIONPROC lpfnCondition,
+	DWORD_PTR       dwCallbackData
+	);
+INT (__stdcall *WSAAddressToStringA1)(
+	LPSOCKADDR          lpsaAddress,
+	DWORD               dwAddressLength,
+	LPWSAPROTOCOL_INFOA lpProtocolInfo,
+	LPSTR               lpszAddressString,
+	LPDWORD             lpdwAddressStringLength
+	);
+void(__stdcall *WSAAsyncGetHostByAddr1)(
+	HWND       hWnd,
+	u_int      wMsg,
+	const char *addr,
+	int        len,
+	int        type,
+	char       *buf,
+	int        buflen
+	);
+void(__stdcall *WSAAsyncGetHostByName1)(
+	HWND       hWnd,
+	u_int      wMsg,
+	const char *name,
+	char       *buf,
+	int        buflen
+	);
+HANDLE(__stdcall *WSAAsyncGetServByPort1)(
+	HWND       hWnd,
+	u_int      wMsg,
+	int        port,
+	const char *proto,
+	char       *buf,
+	int        buflen
+	);
+int(__stdcall *WSAAsyncSelect1)(
+	SOCKET s,
+	HWND   hWnd,
+	u_int  wMsg,
+	long   lEvent
+	);
+int(__stdcall *WSACancelAsyncRequest1)(
+	HANDLE hAsyncTaskHandle
+	);
+int(__stdcall *WSACleanup1)(
+
+	);
+BOOL  (__stdcall *WSACloseEvent1)(
+	WSAEVENT hEvent
+	);
+int  (__stdcall *WSAConnect1)(
+	SOCKET         s,
+	const sockaddr *name,
+	int            namelen,
+	LPWSABUF       lpCallerData,
+	LPWSABUF       lpCalleeData,
+	LPQOS          lpSQOS,
+	LPQOS          lpGQOS
+	);
+BOOL(__stdcall *WSAConnectByList1)(
+	SOCKET               s,
+	PSOCKET_ADDRESS_LIST SocketAddress,
+	LPDWORD              LocalAddressLength,
+	LPSOCKADDR           LocalAddress,
+	LPDWORD              RemoteAddressLength,
+	LPSOCKADDR           RemoteAddress,
+	const timeval        *timeout,
+	LPWSAOVERLAPPED      Reserved
+	);
+BOOL(__stdcall *WSAConnectByNameA1)(
+	SOCKET          s,
+	LPCSTR          nodename,
+	LPCSTR          servicename,
+	LPDWORD         LocalAddressLength,
+	LPSOCKADDR      LocalAddress,
+	LPDWORD         RemoteAddressLength,
+	LPSOCKADDR      RemoteAddress,
+	const timeval   *timeout,
+	LPWSAOVERLAPPED Reserved
+	);
+WSAEVENT (__stdcall *WSACreateEvent1)(
+
+);
+INT (__stdcall *WSADeleteSocketPeerTargetName1)(
+	SOCKET                             Socket,
+	const sockaddr                     *PeerAddr,
+	ULONG                              PeerAddrLen,
+	LPWSAOVERLAPPED                    Overlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE CompletionRoutine
+	);
+int (__stdcall *WSADuplicateSocketA1)(
+	SOCKET              s,
+	DWORD               dwProcessId,
+	LPWSAPROTOCOL_INFOA lpProtocolInfo
+	);
+INT (__stdcall *WSAEnumNameSpaceProvidersA1)(
+	LPDWORD              lpdwBufferLength,
+	LPWSANAMESPACE_INFOA lpnspBuffer
+	);
+INT  (__stdcall *WSAEnumNameSpaceProvidersExA1)(
+	LPDWORD                lpdwBufferLength,
+	LPWSANAMESPACE_INFOEXA lpnspBuffer
+	);
+int  (__stdcall *WSAEnumNetworkEvents1)(
+	SOCKET             s,
+	WSAEVENT           hEventObject,
+	LPWSANETWORKEVENTS lpNetworkEvents
+	);
+int  (__stdcall *WSAEnumProtocolsA1)(
+	LPINT               lpiProtocols,
+	LPWSAPROTOCOL_INFOA lpProtocolBuffer,
+	LPDWORD             lpdwBufferLength
+	);
+int  (__stdcall *WSAEventSelect1)(
+	SOCKET   s,
+	WSAEVENT hEventObject,
+	long     lNetworkEvents
+	);
+int(__stdcall *__WSAFDIsSet1)(
+	SOCKET socket,
+	fd_set * set
+	);
+int(__stdcall *WSAGetLastError1)(
+
+	);
+BOOL  (__stdcall *WSAGetOverlappedResult1)(
+	SOCKET          s,
+	LPWSAOVERLAPPED lpOverlapped,
+	LPDWORD         lpcbTransfer,
+	BOOL            fWait,
+	LPDWORD         lpdwFlags
+	);
+BOOL  (__stdcall *WSAGetQOSByName1)(
+	SOCKET   s,
+	LPWSABUF lpQOSName,
+	LPQOS    lpQOS
+	);
+INT  (__stdcall *WSAGetServiceClassInfoA1)(
+	LPGUID                 lpProviderId,
+	LPGUID                 lpServiceClassId,
+	LPDWORD                lpdwBufSize,
+	LPWSASERVICECLASSINFOA lpServiceClassInfo
+	); INT  (__stdcall *WSAGetServiceClassNameByClassIdA1)(
+		LPGUID  lpServiceClassId,
+		LPSTR   lpszServiceClassName,
+		LPDWORD lpdwBufferLength
+		);
+
+int  (__stdcall *WSAHtonl1)(
+	IN SOCKET  s,
+	IN u_long  hostlong,
+	OUT u_long *lpnetlong
+	);
+int  (__stdcall *WSAHtons1)(
+	IN SOCKET   s,
+	IN u_short  hostshort,
+	OUT u_short *lpnetshort
+	);
+INT  (__stdcall *WSAImpersonateSocketPeer1)(
+	SOCKET         Socket,
+	const sockaddr *PeerAddr,
+	ULONG          PeerAddrLen
+	);
+INT  (__stdcall *WSAInstallServiceClassA1)(
+	LPWSASERVICECLASSINFOA lpServiceClassInfo
+	);
+int  (__stdcall *WSAIoctl1)(
+	SOCKET                             s,
+	DWORD                              dwIoControlCode,
+	LPVOID                             lpvInBuffer,
+	DWORD                              cbInBuffer,
+	LPVOID                             lpvOutBuffer,
+	DWORD                              cbOutBuffer,
+	LPDWORD                            lpcbBytesReturned,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+SOCKET  (__stdcall *WSAJoinLeaf1)(
+	SOCKET         s,
+	const sockaddr *name,
+	int            namelen,
+	LPWSABUF       lpCallerData,
+	LPWSABUF       lpCalleeData,
+	LPQOS          lpSQOS,
+	LPQOS          lpGQOS,
+	DWORD          dwFlags
+	);
+INT  (__stdcall *WSALookupServiceBeginA1)(
+	LPWSAQUERYSETA lpqsRestrictions,
+	DWORD          dwControlFlags,
+	LPHANDLE       lphLookup
+	);
+INT  (__stdcall *WSALookupServiceEnd1)(
+	HANDLE hLookup
+	);
+INT  (__stdcall *WSALookupServiceNextA1)(
+	HANDLE         hLookup,
+	DWORD          dwControlFlags,
+	LPDWORD        lpdwBufferLength,
+	LPWSAQUERYSETA lpqsResults
+	);
+INT  (__stdcall *WSANSPIoctl1)(
+	HANDLE          hLookup,
+	DWORD           dwControlCode,
+	LPVOID          lpvInBuffer,
+	DWORD           cbInBuffer,
+	LPVOID          lpvOutBuffer,
+	DWORD           cbOutBuffer,
+	LPDWORD         lpcbBytesReturned,
+	LPWSACOMPLETION lpCompletion
+	);
+int  (__stdcall *WSANtohl1)(
+	SOCKET s,
+	u_long netlong,
+	u_long *lphostlong
+	);
+int  (__stdcall *WSANtohs1)(
+	SOCKET  s,
+	u_short netshort,
+	u_short *lphostshort
+	);
+int  (__stdcall *WSAPoll1)(
+	LPWSAPOLLFD fdArray,
+	ULONG       fds,
+	INT         timeout
+	);
+INT  (__stdcall *WSAProviderConfigChange1)(
+	LPHANDLE                           lpNotificationHandle,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+INT  (__stdcall *WSAQuerySocketSecurity1)(
+	SOCKET                               Socket,
+	const SOCKET_SECURITY_QUERY_TEMPLATE *SecurityQueryTemplate,
+	ULONG                                SecurityQueryTemplateLen,
+	SOCKET_SECURITY_QUERY_INFO           *SecurityQueryInfo,
+	ULONG                                *SecurityQueryInfoLen,
+	LPWSAOVERLAPPED                      Overlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE   CompletionRoutine
+	);
+int  (__stdcall *WSARecv1)(
+	SOCKET                             s,
+	LPWSABUF                           lpBuffers,
+	DWORD                              dwBufferCount,
+	LPDWORD                            lpNumberOfBytesRecvd,
+	LPDWORD                            lpFlags,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+int  (__stdcall *WSARecvDisconnect1)(
+	SOCKET   s,
+	LPWSABUF lpInboundDisconnectData
+	);
+int(__stdcall *WSARecvEx1)(
+	SOCKET s,
+	char   *buf,
+	int    len,
+	int    *flags
+	);
+int  (__stdcall *WSARecvFrom1)(
+	SOCKET                             s,
+	LPWSABUF                           lpBuffers,
+	DWORD                              dwBufferCount,
+	LPDWORD                            lpNumberOfBytesRecvd,
+	LPDWORD                            lpFlags,
+	sockaddr                           *lpFrom,
+	LPINT                              lpFromlen,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+int(__stdcall *WSARecvMsg1)(
+	_In_    SOCKET                             s,
+	_Inout_ LPWSAMSG                           lpMsg,
+	_Out_   LPDWORD                            lpdwNumberOfBytesRecvd,
+	_In_    LPWSAOVERLAPPED                    lpOverlapped,
+	_In_    LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+INT  (__stdcall *WSARemoveServiceClass1)(
+	LPGUID lpServiceClassId
+	);
+BOOL  (__stdcall *WSAResetEvent1)(
+	WSAEVENT hEvent
+	);
+INT  (__stdcall *WSARevertImpersonation1)(
+
+	);
+int  (__stdcall *WSASend1)(
+	SOCKET                             s,
+	LPWSABUF                           lpBuffers,
+	DWORD                              dwBufferCount,
+	LPDWORD                            lpNumberOfBytesSent,
+	DWORD                              dwFlags,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+int  (__stdcall *WSASendDisconnect1)(
+	SOCKET   s,
+	LPWSABUF lpOutboundDisconnectData
+	);
+int  (__stdcall *WSASendMsg1)(
+	SOCKET                             Handle,
+	LPWSAMSG                           lpMsg,
+	DWORD                              dwFlags,
+	LPDWORD                            lpNumberOfBytesSent,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+int  (__stdcall *WSASendTo1)(
+	SOCKET                             s,
+	LPWSABUF                           lpBuffers,
+	DWORD                              dwBufferCount,
+	LPDWORD                            lpNumberOfBytesSent,
+	DWORD                              dwFlags,
+	const sockaddr                     *lpTo,
+	int                                iTolen,
+	LPWSAOVERLAPPED                    lpOverlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
+	);
+BOOL  (__stdcall *WSASetEvent1)(
+	WSAEVENT hEvent
+	);
+void(__stdcall *WSASetLastError1)(
+	int iError
+	);
+INT  (__stdcall *WSASetServiceA1)(
+	LPWSAQUERYSETA   lpqsRegInfo,
+	WSAESETSERVICEOP essoperation,
+	DWORD            dwControlFlags
+	);
+INT  (__stdcall *WSASetSocketPeerTargetName1)(
+	SOCKET                             Socket,
+	const SOCKET_PEER_TARGET_NAME      *PeerTargetName,
+	ULONG                              PeerTargetNameLen,
+	LPWSAOVERLAPPED                    Overlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE CompletionRoutine
+	);
+INT  (__stdcall *WSASetSocketSecurity1)(
+	SOCKET                             Socket,
+	const SOCKET_SECURITY_SETTINGS     *SecuritySettings,
+	ULONG                              SecuritySettingsLen,
+	LPWSAOVERLAPPED                    Overlapped,
+	LPWSAOVERLAPPED_COMPLETION_ROUTINE CompletionRoutine
+	);
+SOCKET  (__stdcall *WSASocketA1)(
+	int                 af,
+	int                 type,
+	int                 protocol,
+	LPWSAPROTOCOL_INFOA lpProtocolInfo,
+	GROUP               g,
+	DWORD               dwFlags
+	);
+int(__stdcall *WSAStartup1)(
+	WORD      wVersionRequired,
+	LPWSADATA lpWSAData
+	);
+INT  (__stdcall *WSAStringToAddressA1)(
+	LPSTR               AddressString,
+	INT                 AddressFamily,
+	LPWSAPROTOCOL_INFOA lpProtocolInfo,
+	LPSOCKADDR          lpAddress,
+	LPINT               lpAddressLength
+	);
+DWORD  (__stdcall *WSAWaitForMultipleEvents1)(
+	DWORD          cEvents,
+	const WSAEVENT *lphEvents,
+	BOOL           fWaitAll,
+	DWORD          dwTimeout,
+	BOOL           fAlertable
+	);

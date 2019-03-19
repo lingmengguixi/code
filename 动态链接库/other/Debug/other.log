@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\code\c++\workspace\动态链接库\other\main.cpp(9): warning C4018: “<”: 有符号/无符号不匹配
+d:\code\c++\workspace\动态链接库\other\main.cpp(13): warning C4018: “<”: 有符号/无符号不匹配
+  other.vcxproj -> D:\code\c++\workspace\动态链接库\Debug\other.exe

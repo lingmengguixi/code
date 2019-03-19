@@ -1,0 +1,7 @@
+﻿  dllmain.cpp
+d:\code\c++\workspace\动态链接库\修改wsock32\dllmain.cpp(2): fatal error C1083: 无法打开预编译头文件: “Debug\修改wsock32.pch”: No such file or directory
+  make.cpp
+d:\code\c++\workspace\动态链接库\修改wsock32\make.cpp(1): fatal error C1083: 无法打开预编译头文件: “Debug\修改wsock32.pch”: No such file or directory
+  startinit.cpp
+d:\code\c++\workspace\动态链接库\修改wsock32\startinit.cpp(4): fatal error C1083: 无法打开预编译头文件: “Debug\修改wsock32.pch”: No such file or directory
+  正在生成代码...
