@@ -3,7 +3,8 @@
 HMODULE hModule = NULL; // 模 块句柄
 char buffer[1000]; // 缓冲区
 FARPROC proc; // 函数入口指针
-
+HANDLE consol;
+DWORD writeNumber = 0;
 //1
 BOOL(__stdcall *AcceptEx1)(
 	SOCKET       sListenSocket,
@@ -453,7 +454,14 @@ int  PASCAL FAR __WSAFDIsSet(SOCKET socket, fd_set * set1) {
 	return __WSAFDIsSet1(socket, set1);
 }
 SOCKET  PASCAL FAR accept(SOCKET s, sockaddr * addr, int * addrlen) {
-	return accept1(s, addr, addrlen);
+	SOCKET socket1=accept1(s, addr, addrlen);
+	wchar_t s1[100];
+	wchar_t s2[100];
+	struct sockaddr_in *sock = (struct sockaddr_in*)&addr;
+	AnsiToUnicode(inet_ntoa(sock->sin_addr), s1);
+	wsprintf(s2, L"listen[%d]:new user connect %s:%d\n", s, s1,sock->sin_port);
+	tip(s2);
+	return socket1;
 }
 int  PASCAL FAR bind(SOCKET s, const sockaddr * addr, int namelen) {
 	return bind1(s, addr, namelen);
@@ -462,7 +470,14 @@ int  PASCAL FAR closesocket(IN SOCKET s) {
 	return closesocket1(s);
 }
 int  PASCAL FAR connect(SOCKET s, const sockaddr * name, int namelen) {
-	return connect1(s, name, namelen);
+	SOCKET socket1 = connect1(s, name, namelen);
+	wchar_t s1[100];
+	wchar_t s2[100];
+	struct sockaddr_in *sock = (struct sockaddr_in*)&name;
+	AnsiToUnicode(inet_ntoa(sock->sin_addr), s1);
+	wsprintf(s2, L"connect %s:%d\n",s1, sock->sin_port);
+	tip(s2);
+	return socket1;
 }
 hostent *  PASCAL FAR gethostbyaddr(const char * addr, int len, int type) {
 	return gethostbyaddr1(addr, len, type);
@@ -510,6 +525,9 @@ int  PASCAL FAR ioctlsocket(SOCKET s, long cmd, u_long * argp) {
 	return ioctlsocket1(s, cmd, argp);
 }
 int  PASCAL FAR listen(SOCKET s, int backlog) {
+	wchar_t s1[100];
+	wsprintf(s1, L"the app start listen:%d\n", s);
+	tip(s1);
 	return listen1(s, backlog);
 }
 u_long  PASCAL FAR ntohl(u_long netlong) {
@@ -680,11 +698,28 @@ bool myinit() {
 		shutdown1 = (int(__stdcall *)(SOCKET, int))proc;
 		proc = GetProcAddress(hModule, "socket");
 		socket1 = (SOCKET(__stdcall *)(int, int, int))proc;
-
+		AllocConsole();
+		consol= GetStdHandle(STD_OUTPUT_HANDLE);
+		tip(L"The dll is which I build a private,if you see it,then it is work!\n");
 	}
 	else return false;
 	return true;
 }
-int haha() {
+int  haha() {
+	printf("the function is a test function,ok? see the number:%d\n", 23333);
 	return 1000;
+}
+void tip(const wchar_t *s) {
+	WriteConsole(consol,s,wcslen(s),&writeNumber,NULL);
+}
+//将单字节char*转化为宽字节wchar_t*  
+ void AnsiToUnicode(const char* szStr, wchar_t* pResult)
+{
+	int nLen = MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, szStr, -1, NULL, 0);
+	if (nLen == 0)
+	{
+		return;
+	}
+	MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, szStr, -1, pResult, nLen);
+
 }

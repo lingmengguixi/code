@@ -7,7 +7,7 @@
 int main()
 {
 	haha();
-    std::cout << "Hello World!\n"; 
+    std::cout << "Hello World!\n"<<std::endl; 
 	system("pause");
 	return 0;
 }

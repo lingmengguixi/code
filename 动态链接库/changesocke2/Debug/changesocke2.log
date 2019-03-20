@@ -1,4 +1,96 @@
-﻿  LINK : 没有找到 F:\下载\code-master\动态链接库\Debug\changesocke2.dll 或上一个增量链接没有生成它；正在执行完全链接
-    正在创建库 F:\下载\code-master\动态链接库\Debug\changesocke2.lib 和对象 F:\下载\code-master\动态链接库\Debug\changesocke2.exp
-changesocke2.exp : warning LNK4070: .EXP 中的 /OUT:wsock32.dll 指令与输出文件名“F:\下载\code-master\动态链接库\Debug\changesocke2.dll”不同；忽略指令
-  changesocke2.vcxproj -> F:\下载\code-master\动态链接库\Debug\changesocke2.dll
+﻿  dllmain.cpp
+  make.cpp
+e:\git\动态链接库\changesocke2\make.cpp(408): warning C4273: “WSAAsyncGetHostByAddr”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2632): note: 参见“WSAAsyncGetHostByAddr”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(411): warning C4273: “WSAAsyncGetHostByName”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2606): note: 参见“WSAAsyncGetHostByName”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(414): warning C4273: “WSAAsyncGetProtoByName”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2554): note: 参见“WSAAsyncGetProtoByName”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(417): warning C4273: “WSAAsyncGetProtoByNumber”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2580): note: 参见“WSAAsyncGetProtoByNumber”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(420): warning C4273: “WSAAsyncGetServByName”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2498): note: 参见“WSAAsyncGetServByName”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(423): warning C4273: “WSAAsyncGetServByPort”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2526): note: 参见“WSAAsyncGetServByPort”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(426): warning C4273: “WSAAsyncSelect”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2680): note: 参见“WSAAsyncSelect”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(429): warning C4273: “WSACancelAsyncRequest”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2662): note: 参见“WSACancelAsyncRequest”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(432): warning C4273: “WSACancelBlockingCall”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2480): note: 参见“WSACancelBlockingCall”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(435): warning C4273: “WSACleanup”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2371): note: 参见“WSACleanup”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(438): warning C4273: “WSAGetLastError”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2405): note: 参见“WSAGetLastError”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(441): warning C4273: “WSAIsBlocking”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2426): note: 参见“WSAIsBlocking”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(447): warning C4273: “WSASetLastError”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2388): note: 参见“WSASetLastError”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(450): warning C4273: “WSAStartup”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2351): note: 参见“WSAStartup”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(456): warning C4273: “accept”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1625): note: 参见“accept”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(466): warning C4273: “bind”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1647): note: 参见“bind”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(469): warning C4273: “closesocket”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1668): note: 参见“closesocket”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(472): warning C4273: “connect”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1685): note: 参见“connect”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(482): warning C4273: “gethostbyaddr”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2197): note: 参见“gethostbyaddr”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(485): warning C4273: “gethostbyname”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2219): note: 参见“gethostbyname”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(488): warning C4273: “gethostname”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2236): note: 参见“gethostname”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(491): warning C4273: “getpeername”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1729): note: 参见“getpeername”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(494): warning C4273: “getprotobyname”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2331): note: 参见“getprotobyname”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(497): warning C4273: “getprotobynumber”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2314): note: 参见“getprotobynumber”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(500): warning C4273: “getservbyname”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2295): note: 参见“getservbyname”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(503): warning C4273: “getservbyport”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2276): note: 参见“getservbyport”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(506): warning C4273: “getsockname”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1750): note: 参见“getsockname”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(509): warning C4273: “getsockopt”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1771): note: 参见“getsockopt”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(512): warning C4273: “htonl”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1796): note: 参见“htonl”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(515): warning C4273: “htons”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1813): note: 参见“htons”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(518): warning C4273: “inet_addr”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1831): note: 参见“inet_addr”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(521): warning C4273: “inet_ntoa”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1849): note: 参见“inet_ntoa”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(524): warning C4273: “ioctlsocket”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1706): note: 参见“ioctlsocket”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(527): warning C4273: “listen”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1949): note: 参见“listen”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(533): warning C4273: “ntohl”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1968): note: 参见“ntohl”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(536): warning C4273: “ntohs”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1985): note: 参见“ntohs”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(539): warning C4273: “recv”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2002): note: 参见“recv”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(542): warning C4273: “recvfrom”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2025): note: 参见“recvfrom”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(545): warning C4273: “select”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2052): note: 参见“select”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(548): warning C4273: “send”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2077): note: 参见“send”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(551): warning C4273: “sendto”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2100): note: 参见“sendto”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(554): warning C4273: “setsockopt”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2127): note: 参见“setsockopt”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(557): warning C4273: “shutdown”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2152): note: 参见“shutdown”的前一个定义
+e:\git\动态链接库\changesocke2\make.cpp(560): warning C4273: “socket”: dll 链接不一致
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2172): note: 参见“socket”的前一个定义
+  正在生成代码...
+e:\git\动态链接库\changesocke2\make.cpp(366): warning C4717: “EnumProtocolsW”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+  LINK : 没有找到 E:\git\动态链接库\Debug\changesocke2.dll 或上一个增量链接没有生成它；正在执行完全链接
+    正在创建库 E:\git\动态链接库\Debug\changesocke2.lib 和对象 E:\git\动态链接库\Debug\changesocke2.exp
+changesocke2.exp : warning LNK4070: .EXP 中的 /OUT:wsock32.dll 指令与输出文件名“E:\git\动态链接库\Debug\changesocke2.dll”不同；忽略指令
+  changesocke2.vcxproj -> E:\git\动态链接库\Debug\changesocke2.dll

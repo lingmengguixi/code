@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\code\c++\workspace\动态链接库\Debug;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\code\c++\workspace\动态链接库\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\git\动态链接库\Debug;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\git\动态链接库\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
