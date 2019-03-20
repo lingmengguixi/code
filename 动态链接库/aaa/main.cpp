@@ -10,6 +10,7 @@ int main()
 	int count=init("2.txt");
 	writeAsReadAddr("3.txt");
 	writeAsBindVarToFun("4.txt");
+	writeAsDef("5.txt", 9);
 	printf("count=%d\n", count);
 
 	system("pause");

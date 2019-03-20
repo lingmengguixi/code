@@ -167,3 +167,10 @@ void writeAsBindVarToFun(const char *fileName) {
 	}
 	fclose(fp);
 }
+void writeAsDef(const char *fileName,int startCode) {
+	FILE *fp = fopen(fileName, "w");
+	for (int i = 0; i < count1; i++) {
+		fprintf(fp, "%s @%d\n",fun[i].return_name,startCode+i);
+	}
+	fclose(fp);
+}

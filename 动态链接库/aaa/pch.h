@@ -20,3 +20,4 @@ int init(const char *fileName);
 void readArgs(char *s, Fun &fun);
 void writeAsReadAddr(const char *fileName);
 void writeAsBindVarToFun(const char *fileName);
+void writeAsDef(const char *fileName, int startCode);
